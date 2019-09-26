@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.spring.cloud.alibaba</groupId>
+	<artifactId>springCloudAlibaba</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>springCloudAlibaba</name>
+	<description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+
+	<modules>
+		<module>sentinel</module>
+		<module>nacos-config</module>
+	    <module>nacos-discovery</module>
+	    <module>dubbo-provider</module>
+	    <module>dubbo-api</module>
+	    <module>nacos-config-springcloudalibaba</module>
+		<module>nacos-discovery-dubbo</module>
+		<module>dubbo-consumer</module>
+	</modules>
+	
+	<properties>
+		<java.version>1.8</java.version>
+		<alibaba.nacos.version>0.2.1</alibaba.nacos.version>
+		<alibaba.sentinel.version>0.2.1.RELEASE</alibaba.sentinel.version>
+		<alibaba.dubbo.version>2.0.0</alibaba.dubbo.version>
+		<spring.cloud.alibaba.nacos.version>2.1.0.RELEASE</spring.cloud.alibaba.nacos.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+	</dependencies>
+	<dependencyManagement>
+	   <dependencies>
+		<dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+	        <version>${alibaba.sentinel.version}</version>
+	    </dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+    		<artifactId>nacos-config-spring-boot-starter</artifactId>
+            <version>${alibaba.nacos.version}</version>
+         </dependency>
+<!--          <dependency>
+		    <groupId>com.alibaba.boot</groupId>
+		    <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+		    <version>${alibaba.nacos.version}</version>
+		 </dependency> -->
+		 <dependency> 
+			<groupId>com.alibaba.spring.boot</groupId> 
+			<artifactId>dubbo-spring-boot-starter</artifactId> 
+			<version>${alibaba.dubbo.version}</version> >
+		 </dependency>
+	   </dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

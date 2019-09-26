@@ -1,0 +1,4 @@
+server:
+  port: 6666
+spring:  application:    name: sentinel-deme  cloud:    sentinel:     transport:        dashboard: localhost:8080
+     

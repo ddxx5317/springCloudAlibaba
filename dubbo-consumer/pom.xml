@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.spring.cloud.alibaba</groupId>
+    <artifactId>springCloudAlibaba</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>dubbo-consumer</artifactId>
+  <name>dubbo-consumer</name>
+  
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+	    <dubbo-spring-boot-starter.version>0.2.1.RELEASE</dubbo-spring-boot-starter.version>
+		<nacos-discovery-spring-boot-starter.version>0.2.1</nacos-discovery-spring-boot-starter.version>
+		<dubbo.version>2.6.5</dubbo.version>
+		<dubbo-registry-nacos.version>0.0.1</dubbo-registry-nacos.version>
+		<dubbo-spring-context-support.version>1.0.2</dubbo-spring-context-support.version>
+  </properties>
+  <dependencies>
+  	 <dependency>
+		<groupId>com.spring.cloud.alibaba</groupId>
+		<artifactId>dubbo-api</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  		
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>dubbo</artifactId>
+		    <version>${dubbo.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>dubbo-registry-nacos</artifactId>
+		    <version>${dubbo-registry-nacos.version}</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>com.alibaba.boot</groupId>
+		    <artifactId>dubbo-spring-boot-starter</artifactId>
+		    <version>${dubbo-spring-boot-starter.version}</version>
+		    <exclusions>
+				<exclusion>
+		            <groupId>com.alibaba</groupId>
+		            <artifactId>dubbo</artifactId>
+				</exclusion>
+		    </exclusions>
+		</dependency>
+ 		<dependency>
+		    <groupId>com.alibaba.boot</groupId>
+		    <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+		    <version>${nacos-discovery-spring-boot-starter.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

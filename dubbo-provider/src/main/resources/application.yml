@@ -1,0 +1,15 @@
+server:
+  port: 6663
+spring:  application:    name: dubbo-provider-deme
+
+dubbo: 
+  registry: 
+    address: nacos://127.0.0.1:8848
+  application:
+    name: dubbo-provider-deme
+  protocol: 
+    name: dubbo
+    port: 20880
+  scan: 
+    base-packages: org.dubbo.provider.service.impl
+ 
