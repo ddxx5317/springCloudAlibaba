@@ -23,11 +23,13 @@
 	    <module>nacos-config-springcloudalibaba</module>
 		<module>nacos-discovery-dubbo</module>
 		<module>dubbo-consumer</module>
+	    <module>nacos-config-springcloud</module>
+        <module>sentinel-springclooudalibaba</module>
 	</modules>
 	
 	<properties>
 		<java.version>1.8</java.version>
-		<alibaba.nacos.version>0.2.1</alibaba.nacos.version>
+		<alibaba.nacos.version>0.2.3</alibaba.nacos.version>
 		<alibaba.sentinel.version>0.2.1.RELEASE</alibaba.sentinel.version>
 		<alibaba.dubbo.version>2.0.0</alibaba.dubbo.version>
 		<spring.cloud.alibaba.nacos.version>2.1.0.RELEASE</spring.cloud.alibaba.nacos.version>
@@ -71,6 +73,11 @@
     		<artifactId>nacos-config-spring-boot-starter</artifactId>
             <version>${alibaba.nacos.version}</version>
          </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-config-spring-boot-actuator</artifactId>
+            <version>${alibaba.nacos.version}</version>
+        </dependency>
 <!--          <dependency>
 		    <groupId>com.alibaba.boot</groupId>
 		    <artifactId>nacos-discovery-spring-boot-starter</artifactId>

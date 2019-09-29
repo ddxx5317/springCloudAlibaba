@@ -1,5 +1,6 @@
 package org.nacos.config.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ public class NacosController {
 
 	@RequestMapping("/index")
 	public String index() {
-		System.out.println("into......");
+		System.out.println(HttpStatus.OK.getReasonPhrase());
 		return this.nacosKey;
 		
 	}

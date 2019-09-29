@@ -1,3 +1,3 @@
 server:  port: 6665
-spring:  application:    name: nacos-config    #必须和nacos data ID一致、例如：控制台名称为：nacos-config.properties
-  cloud:    nacos:      config:        server-addr: 127.0.0.1:8848
+spring:  application:    name: nacos-config-demo    #如果未配置nacos.config.prefix，必须和nacos data ID一致、例如：控制台名称为：nacos-config.properties
+  cloud:    nacos:      config:        server-addr: 127.0.0.1:8848        namespace: db53571a-e297-4a8f-b6e6-c38b50745ee9        ext-config:        - data-id: nacos-defualt-config.properties       #必须带文件扩展名          refresh: true        - data-id: nacos-config.properties          refresh: true                  

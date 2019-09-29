@@ -13,13 +13,9 @@ public class NacosController {
 	@Value("${nacos_key}")
 	private String nacosKey;
 	
-	@Value("${nacos_key1}")
-	private String nacosKey1;
-
 	@RequestMapping("/index")
 	public String index() {
 		System.out.println(HttpStatus.OK.getReasonPhrase());
-		System.out.println(this.nacosKey1);
 		return this.nacosKey;
 	}
 }
