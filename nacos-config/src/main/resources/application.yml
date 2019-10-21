@@ -1,6 +1,13 @@
 server: 
   port: 6665
-spring:   application:     name: nacos-config-demenacos:   config:     server-addr: 127.0.0.1:8848
+spring: 
+  application: 
+    name: nacos-config-deme
+nacos: 
+  config: 
+    bootstrap:
+      enable: true
+    server-addr: 127.0.0.1:8848
     namespace:  db53571a-e297-4a8f-b6e6-c38b50745ee9 #建议用-D命令在服务器启动时动态指定 
     data-id: nacos-main-config
     group: DEFAULT_GROUP
